@@ -1,1 +1,1 @@
-use react-router with redux
+use react-router

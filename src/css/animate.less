@@ -1,0 +1,60 @@
+// 上下动画
+@keyframes bottomUp {
+	0% { transform: translate3d(0, 100%, 0); opacity: 0; }
+	100% { transform: translate3d(0, 0, 0); opacity: 1; }
+}
+@-webkit-keyframes bottomUp {
+	0% { -webkit-transform: translate3d(0, 100%, 0); opacity: 0; }
+	100% { -webkit-transform: translate3d(0, 0, 0); opacity: 1; }
+}
+@keyframes upBottom {
+	0% { transform: translate3d(0, 0, 0); opacity: 1; }
+	100% { transform: translate3d(0, 100%, 0); opacity: 0; }
+}
+@-webkit-keyframes upBottom {
+	0% { -webkit-transform: translate3d(0, 0, 0); opacity: 0; }
+	100% { -webkit-transform: translate3d(0, 100%, 0); opacity: 1; }
+}
+.animateBottomUp-enter { animation: bottomUp .2s ease-out; }
+.animateBottomUp-leave { animation: upBottom .2s ease-out; }
+
+// 左右动画
+@keyframes rightLeft {
+	0% { transform: translate3d(100%, 0, 0); opacity: 0; }
+	100% { transform: translate3d(0, 0, 0); opacity: 1; }
+}
+@-webkit-keyframes rightLeft {
+	0% { -webkit-transform: translate3d(100%, 0, 0); opacity: 0; }
+	100% { -webkit-transform: translate3d(0, 0, 0); opacity: 1; }
+}
+@keyframes leftRight {
+	0% { transform: translate3d(0, 0, 0); opacity: 1; }
+	100% { transform: translate3d(100%, 0, 0); opacity: 0; }
+}
+@-webkit-keyframes leftRight {
+	0% { -webkit-transform: translate3d(0, 0, 0); opacity: 1; }
+	100% { -webkit-transform: translate3d(100%, 0, 0); opacity: 0; }
+}
+@keyframes scaleIn {
+	0% { transform: scale3d(0, 0, 1); opacity: 0; }
+	100% { transform: scale3d(1, 1, 1); opacity: 1; }
+}
+@-webkit-keyframes scaleIn {
+	0% { -webkit-transform: scale3d(0, 0, 1); opacity: 0; }
+	100% { -webkit-transform: scale3d(1, 1, 1); opacity: 1; }
+}
+@keyframes scaleOut {
+	0% { transform: scale3d(1, 1, 1); opacity: 1; }
+	100% { transform: scale3d(0, 0, 1); opacity: 0; }
+}
+@-webkit-keyframes scaleOut {
+	0% { -webkit-transform: scale3d(1, 1, 1); opacity: 1; }
+	100% { -webkit-transform: scale3d(0, 0, 1); opacity: 0; }
+}
+.animate-right-left.ng-enter { animation: rightLeft .2s ease-out; }
+.animate-right-left.ng-leave { animation: leftRight .2s ease-out; }
+
+.slide-to-up.ng-enter { transform: translate3d(0, 50%, 0); transition: all .5s; }
+.slide-to-up.ng-enter-active { transform: translate3d(0, 0, 0); }
+.animate-scale.ng-enter { animation: scaleIn .2s ease; }
+.animate-scale.ng-leave { animation: scaleOut .2s ease; }
